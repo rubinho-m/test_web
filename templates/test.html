@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+<h1>Введите имя и фамилию для теста великой разработки</h1>
+<br>
+<h4>Мы не работаем на ЦРУ</h4>
+<br>
+<br>
+<br>
+{% block content %} {% endblock %}
+<br>
+<br>
+{% for x in users %}
+<div id="table-center">
+    <table class="table table-bordered">
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+        </tr>
+        <tr>
+            <td>{{ x.name }}</td>
+            <td>{{ x.surname }}</td>
+        </tr>
+    </table>
+</div>
+{% endfor %}
+</body>
+</html>
